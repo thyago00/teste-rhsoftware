@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ApiService } from '../service/api.service';
 import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
 import { ModalCartaComponent } from './modal-carta/modal-carta.component';
+import { InstrucoesComponent } from './instrucoes/instrucoes.component';
 
 @Component({
   selector: 'app-root',
@@ -24,8 +25,20 @@ constructor(
 ngOnInit(){
   this.apiService.obterCartas().subscribe(data =>{
     this.cartas = data;
-    console.log(data)
   })
+  this.instrucoes()
+}
+
+instrucoes(){
+  const optionsModal: NgbModalOptions = {
+    centered: false,
+    size: 'sm',
+    backdrop: 'static',
+    keyboard: false,
+    backdropClass: 'modal-backdrop',
+    windowClass: 'modal-over'
+  };
+  const modalRef = this.modalService.open(InstrucoesComponent, optionsModal);
 }
 
 iniciar(){

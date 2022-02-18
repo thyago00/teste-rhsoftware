@@ -6,11 +6,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ModalCartaComponent } from './modal-carta/modal-carta.component';
+import { InstrucoesComponent } from './instrucoes/instrucoes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ModalCartaComponent
+    ModalCartaComponent,
+    InstrucoesComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +22,8 @@ import { ModalCartaComponent } from './modal-carta/modal-carta.component';
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [
-    ModalCartaComponent
+    ModalCartaComponent,
+    InstrucoesComponent
   ]
 })
 export class AppModule { }

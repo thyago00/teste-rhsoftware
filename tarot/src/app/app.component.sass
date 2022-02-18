@@ -1,0 +1,63 @@
+*
+    margin: 0
+    padding: 0
+    font-family: sans-serif
+
+.container
+    margin: 0 auto
+
+.cartas
+    margin-top: 15px
+
+.card
+    position: relative
+    width: 164px
+    height: 311px
+    transform-style: preserve-3d
+    transition: all 0.8s ease
+    border: none
+    margin: 10px
+
+#carta-imagem
+    height: 100%
+
+.back
+    position: absolute
+    width: 100%
+    height: 100%
+    backface-visibility: hidden
+    background-image: url("https://dkw5ssdvaqf8l.cloudfront.net/static/psr/br/framework/yii/images/content/pt-br/product/tarot/marselha/back-blue-card.png")
+    background-repeat: no-repeat
+    transform: rotateY(180deg)
+
+.front
+    position: absolute
+    width: 100%
+    height: 100%
+    backface-visibility: hidden
+    color: #000
+    background-repeat: no-repeat
+    text-align: center
+    border: 1px solid lightgray
+
+#titulo
+    margin: 25px 0
+
+#texto
+    padding-top: 5px
+
+.flipCard
+    transform: rotateY(180deg)
+
+.botao button
+    padding: 7px
+    color: white
+    margin: 20px 0
+
+
+#botao-iniciar
+    background-color: #CD006B
+    font-weight: bold
+
+#botao-reiniciar
+    font-weight: bold

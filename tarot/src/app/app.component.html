@@ -1,0 +1,21 @@
+<div class="container">
+  <h1 id="titulo" class="text-center">Bem vindo(a) ao jogo de tarot</h1>
+  <div class="cartas row">
+    <div class="col-md-2" *ngFor="let item of cartas?.cards; let i = index">
+    <div class="card" [attr.id]="'card' + i">
+      <div class="back" [ngStyle]="!verifica && {'cursor': 'pointer'}" (click)="verifica ? null : selecionarCarta(i, item)">
+    </div>
+    <!-- <div class="front" [ngStyle]="{'background-image': 'url(https://dkw5ssdvaqf8l.cloudfront.net/static/psr/br/framework/yii/images/content/pt-br/product/tarot/marselha/162x341/' + item.image + ')'}">
+    </div> -->
+    <div class="front">
+      <img id="carta-imagem" src="https://dkw5ssdvaqf8l.cloudfront.net/static/psr/br/framework/yii/images/content/pt-br/product/tarot/marselha/162x341/{{item.image}}" alt="">
+  </div>
+    </div>
+  </div>
+  </div>
+  
+  <div class="botao text-center">
+  <button class="btn" id="botao-iniciar" *ngIf="!esconderBotao" (click)="iniciar()">Sortear as cartas</button>
+  <button class="btn btn-danger" id="botao-reiniciar" *ngIf="esconderBotao" (click)="reiniciar()">Reiniciar o jogo</button>
+  </div>
+  </div>
